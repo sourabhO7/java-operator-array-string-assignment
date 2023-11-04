@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++
-1. List the operators in Java?
+1. List the operators in Java? 
 ++++++++++++++++++++++++++++++
 There are many operators in java based on various types or classification. They are:
  1. Increment and Decrement operators - i++ or ++i , i-- or --i 
