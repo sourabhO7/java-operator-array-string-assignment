@@ -1,0 +1,261 @@
+++++++++++++++++++++++++++++++
+1. List the operators in Java?
+++++++++++++++++++++++++++++++
+There are many operators in java based on various types or classification. They are:
+ 1. Increment and Decrement operators - i++ or ++i , i-- or --i 
+ 2. Arithmetic operator - +,-,*,/,% 
+ 3. Relational operator - >,>=,<,<=
+ 4. Equality operator - == or != 
+ 5. Bitwise operator - &,|,^,~,!
+ 6. Short Circuit operator - &&, ||
+ 7. Type casting operator or Cast operator - byte b = (byte)b+1;
+ 8. Assignment operator - 
+    1. Simple Assignment - int i = 10;
+    2. Chained Assignment - => int a,b,c,d; => a=b=c=d=20;
+    3. Compound Assignment - => +=,-=,*=,/+,%=,&=,|=,!= 
+ 9. Conditional or Ternary operator - int a = 10==10?40:60;
+ 10. new operation 
+ 11. . operator 
+ 12. [] operator
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+2. Explain about the increment and decrement operator and give an examples?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Increment Operator: 
+This operator basically increment the value by 1 for integral, char and floating data types. 
+There are two types:
+ - Pre increment => ++i
+   First you increment it and then use it
+ - Post increment => i++
+   First you use it and then increment it 
+
+Examples:
+PreIncrement:
+public class Test{
+ int a = 10;
+ int b = ++a;
+
+ System.out.println(a+"\t"+b); // 11  11
+}
+
+PostIncrement 
+public class Test{
+ int a = 10;
+ int b = a++;
+
+ System.out.println(a+"\t"+b); // 11  10
+}
+
+Decrement Operator:
+This operator basically decrement the value by 1 for integral, char and floating data types. 
+
+There are two types:
+ - Pre decrement => --i
+   First you increment it and then use it
+ - Post decrement => i--
+   First you use it and then increment it 
+
+Examples:
+PreDecrement:
+public class Test{
+ int a = 10;
+ int b = --a;
+
+ System.out.println(a+"\t"+b); // 9  9
+}
+
+PostDecrement: 
+public class Test{
+ int a = 10;
+ int b = a--;
+
+ System.out.println(a+"\t"+b); // 9  10
+}
+
+Note:
+There are few constraint that must be followed when using Increment or decrement operator:
+1. It must not be used with constant value directly. 
+ int a = 10++; // invalid 
+2. Nesting of this operator is not permitted 
+ int a = ++(10++); // invalid 
+3. final keyword used variable will be application with this operator 
+ final int a = 10;
+ a++; // CE 
+4. It is not applicable to the boolean type 
+ boolean b = true;
+ b++; // CE
+
+++++++++++++++++++++++++++++++++++++++++++
+3. What are conditional operator in java?
+++++++++++++++++++++++++++++++++++++++++++
+These are also known as the ternary operator and they are working just like the if else statement. 
+Syntax:
+(condition)? true:false
+
+For example:
+int a = 30==40? 30:70>30?45:33;
+System.out.println(a); // 45
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+4. What are the types of operators based on the number of operands?
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+There are three types:
+ 1. Urany Operator:
+   Here only one operand come into picture. 
+   Examples: 
+   1. Increment and Decrement Operator
+   2. Bitwise operator like ~4, !7
+ 2. Binary Operator:
+   Here only two operand come into picture. 
+   Examples:
+   1. Arithmetic Operator
+   2. Relational Operator
+   3. Equality Operator
+   4. Bitwise operator like &,|,^
+ 3. Ternary Operator:
+   Here three operands comes into picture
+   Example is Ternary opeartor or Condtinal Operator
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+5. What are the conditional statements and use of conditional statements in java?
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+These staements are also can be called as Selective statement and it comes under the category of the Flow control statement. 
+These are:
+ 1. if statement
+ Syntax: if(boolean){	
+		statement--------
+		statement--------
+	 }
+
+ 2. if else statement
+ Syntax: if(boolean){	
+		statement--------
+		statement--------
+	 }else if(boolean){	
+		statement--------
+		statement--------
+	 }else if(boolean){	
+		statement--------
+		statement--------
+	 }else{	
+		statement--------
+		statement--------
+	 }
+
+ 3. switch statement  
+ switch(argument){
+   case 1: // statement
+   case 2: // statement
+   default: // statement
+ }
+
+ Note: Argument must be with byte, short, char, int or respective wrapper class, String or Enums
+
+
++++++++++++++++++++++++++++++++++++++++++++
+6. What is the systax of if-else statement?
++++++++++++++++++++++++++++++++++++++++++++
+Syntax:
+if(boolean){
+	statement--------
+	statement--------
+}else if(boolean){
+	statement--------
+	statement--------
+}
+else if(boolean){
+	statement--------
+	statement--------
+}
+else{
+	statement--------
+	statement--------
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+7. What are the three types of the Iterative statement in java?
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Three types of Iterative statements are:
+ 1. while loop 
+ If we don't know the no of iteration in advance then we should use while loop. 
+ Syntax: while(boolean){
+		statement--------
+		statement--------
+		statement--------
+         }
+
+Note:
+ - Curly braces are optional if single statement is used or declared.
+ - If single statement is used then it must not be a declarative statement 
+ - If declarative statement is used with curly braces then the scope of the variable will be withing the body of the loop
+
+2. do while loop 
+ If we want to execute the body of the loop only once then we should go with do while loop. 
+ Syntax: do{
+	    statement--------
+	    statement--------
+	    statement--------	
+	 }while(boolean);
+
+Note:
+ - Curly braces are optional if single statement is used or declared.
+ - If single statement is used then it must not be a declarative statement 
+ - If declarative statement is used with curly braces then the scope of the variable will be withing the body of the loop
+
+3. for loop 
+ If we know the exact no of iteration then we should go with the for loop. 
+ Syntax: for(initialization;condition;inc++/dec--){
+	    statement--------
+	    statement--------
+	    statement--------	
+	 }
+
+Note:
+ - Curly braces are optional if single statement is used or declared.
+ - If single statement is used then it must not be a declarative statement 
+ - If declarative statement is used with curly braces then the scope of the variable will be withing the body of the loop
+
+++++++++++++++++++++++++++++++++
+8. What do you mean by an Array?
+++++++++++++++++++++++++++++++++
+Array is one type of the data structure concept wise. But in java it is is a pre defined class which can be used to hold the collection of the homogenous data together using single point of reference. 
+
+For example: int[] a = new int[5];
+
+++++++++++++++++++++++++++
+9. How to create an Array?
+++++++++++++++++++++++++++
+There are two ways we can create an array. They are  
+
+ 1. // declaration 
+      int[] a;
+    // construction 
+      a = new int[5];
+    // initialization 
+      a[0] = 10;
+      a[1] = 20;
+      a[2] = 30;
+      a[3] = 40;
+      a[4] = 50;
+
+ 2. // declaration constuction and initialization together 
+    int[] a = {10,20,30,40,50};
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+10. State the difference between StringBuffer and StringBuilder in java?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Both are mutable in nature which means you don't need to create the new object everytime data is altered. 
+
+Some key differences are:
+
+StringBuffer:
+1. StirngBuffer is thread safe which means only one thread can access the method at a time. This makes the StringBuffer performance wise slow. 
+2. StirngBuffer was introduced since legacy class. 
+
+StringBuilder:
+1. StringBuilder is not thread safe which means multiple thread can access the method at a time. This makes the StirngBuilder much faster as compare to the StringBuffer. 
+2. StringBuilder was introduced since Java 5.
+
+
+
+
